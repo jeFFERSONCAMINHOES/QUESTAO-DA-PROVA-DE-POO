@@ -13,7 +13,6 @@ public class OS{
 
 
     private int Order;
-    private Tecnic responsavel;
     private Client client;
     private String status;
     private Date opened;
@@ -21,7 +20,6 @@ public class OS{
 
     public OS(int Order, Tecnic responsavel, Client client) {
         this.Order = Order;
-        this.responsavel = responsavel;
         this.client = client;
         this.status = "Pendente";
         this.opened = new Date();
@@ -29,14 +27,6 @@ public class OS{
 
     public int getOrder() {
         return Order;
-    }
-
-    public Tecnic getResponsavel() {
-        return responsavel;
-    }
-
-    public void setResponsavel(Tecnic responsavel) {
-        this.responsavel = responsavel;
     }
 
     public Client getclient() {

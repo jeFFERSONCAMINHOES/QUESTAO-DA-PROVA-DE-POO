@@ -1,0 +1,122 @@
+import java.util.Date;
+
+class Client {
+    private String nome;
+    private String numeroCelular;
+
+    public Client(String nome, String numeroCelular) {
+        this.nome = nome;
+        this.numeroCelular = numeroCelular;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getNumeroCelular() {
+        return numeroCelular;
+    }
+}
+
+class Servico {
+    private int codigo;
+    private String nome;
+    private int prazoMaximo; // Prazo máximo em horas
+
+    public Servico(int codigo, String nome, int prazoMaximo) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.prazoMaximo = prazoMaximo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getPrazoMaximo() {
+        return prazoMaximo;
+    }
+}
+
+class Tecnico {
+    private String nome;
+
+    public Tecnico(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
+
+class OrdemServico {
+    private int numero;
+    private Client cliente;
+    private Servico servico;
+    private Tecnico tecnico;
+    private Date dataAbertura;
+    private Date dataFechamento;
+
+    public OrdemServico(int numero, Client cliente, Servico servico, Tecnico tecnico) {
+        this.numero = numero;
+        this.cliente = cliente;
+        this.servico = servico;
+        this.tecnico = tecnico;
+        this.dataAbertura = new Date();
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public Client getCliente() {
+        return cliente;
+    }
+
+    public Servico getServico() {
+        return servico;
+    }
+
+    public Tecnico getTecnico() {
+        return tecnico;
+    }
+
+    public Date getDataAbertura() {
+        return dataAbertura;
+    }
+
+    public Date getDataFechamento() {
+        return dataFechamento;
+    }
+
+    public void setDataFechamento(Date dataFechamento) {
+        this.dataFechamento = dataFechamento;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Client cliente1 = new Client("João", "123456789");
+        Tecnico tecnico1 = new Tecnico("Maria");
+        Servico servico1 = new Servico(1, "Instalação de Software", 72);
+
+        OrdemServico os1 = new OrdemServico(1, cliente1, servico1, tecnico1);
+
+        System.out.println("Número da Ordem de Serviço: " + os1.getNumero());
+        System.out.println("Cliente: " + os1.getCliente().getNome());
+        System.out.println("Serviço: " + os1.getServico().getNome());
+        System.out.println("Técnico: " + os1.getTecnico().getNome());
+        System.out.println("Data de Abertura: " + os1.getDataAbertura());
+
+        // Simulando o fechamento da OS
+        Date dataFechamento = new Date(os1.getDataAbertura().getTime() + (servico1.getPrazoMaximo() * 60 * 60 * 1000));
+        os1.setDataFechamento(dataFechamento);
+
+        System.out.println("Data de Fechamento: " + os1.getDataFechamento());
+    }
+}
