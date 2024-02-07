@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ProgressBar?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ProgressBar layoutX="184.0" layoutY="179.0" prefWidth="200.0" progress="0.0" />
+            <StackedBarChart layoutX="184.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </StackedBarChart>
+            <TextArea layoutX="1.0" layoutY="179.0" prefHeight="200.0" prefWidth="210.0" text="Beber mais água&#10;Coma mais proteina&#10;Evite carboidratos&#10;ex::::&#10;&#10;Sugestões para melhorar o progresso de saúde" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="3.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="         Metas - Em progresso" wrappingWidth="200.00000162422657" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+            <Text layoutX="261.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="261.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso especifico" wrappingWidth="379.13671875" />
+            <Text layoutX="460.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTRO DA ALTERAÇÃO DE PESO" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
